@@ -1,0 +1,29 @@
+body {
+    background-color: blue;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(225, 65, 185);
+    height: auto;
+    margin: auto;
+    color: white;
+}
+
+p {
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    width: 200px;
+    height: auto;
+    margin: 3% auto;
+    font-size: larger;
+}
+
+.btn {
+    display: block;
+    margin: 3% auto;
+    width: 200px;
+    height: 30px;
+    font-size: larger;
+}
