@@ -1,3 +1,15 @@
+var randomArr = randomDigit();
+
+document.getElementById("check_it").addEventListener("click", function() {
+    getNumber();
+});
+
+document.getElementById("input").addEventListener("keyup", function(event) {
+    if (event.which === 13) {
+        getNumber();
+    }
+});
+//To add results to the list
 function list(val, res) {
     var li = document.createElement("li");
     var node = document.createTextNode(val + " = " + res);
@@ -5,17 +17,6 @@ function list(val, res) {
     var ol = document.getElementById("result");
     ol.appendChild(li);
 }
-
-document.getElementById("check_it").addEventListener("click", function() {
-    getNumber();
-});
-document.getElementById("input").addEventListener("keyup", function(event) {
-    if (event.which === 13) {
-        getNumber();
-    }
-});
-
-var randomArr = randomDigit();
 
 //To get random number
 function randomDigit() {
@@ -100,10 +101,10 @@ function compare(arr1, arr2, value) {
         alert("CONGRATULATIONS! YOU WIN");
         var next_game = confirm("Do you want to play again?");
         if (next_game == true) {
-            randomArr = randomDigit();
+            location.reload();
         } else {
             alert("Thanks for game!");
-            randomArr = randomDigit();
+            location.reload();
         }
     }
 }

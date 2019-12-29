@@ -12,9 +12,10 @@ h1 {
     color: white;
 }
 
-.demo {
+#input {
     height: 50px;
     width: auto;
+    text-align: center;
 }
 
 .para {
@@ -56,6 +57,7 @@ ol li {
     background-color: white;
     max-width: 100%;
     padding-left: 20px;
+    text-align: left;
 }
 
 div h2 {
