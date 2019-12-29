@@ -36,4 +36,13 @@ p {
         width: 50%;
         font-size: larger;
     }
+    p {
+        text-align: center;
+        padding: 30px;
+        background-color: white;
+        width: 500px;
+        height: auto;
+        margin: 30% auto;
+        font-size: larger;
+    }
 }
