@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7ulEolbTE1dGYyqBM8-wtDX7E4QJwC5RSlcy8dIVKwphgD6gvg&s)
+    background-image: url(https://cdn.mos.cms.futurecdn.net/yeRy6ZRcXnWMhca2PEYbfH-320-80.jpg)
 }
 
 h1 {
@@ -26,4 +26,14 @@ p {
     width: 200px;
     height: 30px;
     font-size: larger;
+}
+
+@media (max-width: 299px) {
+    .btn {
+        display: block;
+        margin: 30% auto;
+        height: 60px;
+        width: 50%;
+        font-size: larger;
+    }
 }
