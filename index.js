@@ -1,3 +1,11 @@
+function list(val, res) {
+    var li = document.createElement("li");
+    var node = document.createTextNode(val + " = " + res);
+    li.appendChild(node);
+    var ol = document.getElementById("result");
+    ol.appendChild(li);
+}
+
 var randomArr = randomDigit();
 //To get random number
 function randomDigit() {
@@ -44,10 +52,10 @@ function getNumber() {
     } else if (thousands == hundreds || thousands == tens || thousands == units || hundreds == tens || hundreds == units || tens == units) {
         alert("All the digits must be different");
     } else
-        compare(randomArr, formArr(value));
+        compare(randomArr, formArr(value), value);
 }
-//To compare the input of users and random number
-function compare(arr1, arr2) {
+//To compare the input of users and random number. Besides get the input value for adding to list.  
+function compare(arr1, arr2, value) {
     var num1 = 0;
     var num2 = 0;
 
@@ -62,14 +70,18 @@ function compare(arr1, arr2) {
         }
     }
     if (num1 == 0 && num2 == 0) {
-        document.getElementById("demo").innerHTML = 0;
+        document.getElementById("par").innerHTML = 0;
+        list(value, ("-" + 0));
     } else if (num1 == 0 && num2 != 0) {
-        document.getElementById("demo").innerHTML = "-" + num2;
+        document.getElementById("par").innerHTML = "-" + num2;
+        list(value, ("-" + num2));
     } else if (num1 != 0 && num1 != 4 && num2 == 0) {
-        document.getElementById("demo").innerHTML = "+" + num1;
+        document.getElementById("par").innerHTML = "+" + num1;
+        list(value, ("+" + num1));
     } else if (num1 != 0 && num2 != 0) {
-        document.getElementById("demo").innerHTML = "+" + num1 + ", " + "-" + num2;
+        document.getElementById("par").innerHTML = "+" + num1 + ", " + "-" + num2;
+        list(value, ("+" + num1 + ", " + "-" + num2));
     } else if (num1 == 4) {
-        document.getElementById("demo").innerHTML = "CONGRATULATIONS!<br>YOU WIN";
+        document.getElementById("par").innerHTML = "CONGRATULATIONS!<br>YOU WIN";
     }
 }
