@@ -1,5 +1,5 @@
 var randomArr = randomDigit();
-
+//To get random number
 function randomDigit() {
     while (true) {
         var number = Math.floor((Math.random() * 10000) + 1000);
@@ -16,6 +16,7 @@ function randomDigit() {
     }
 }
 
+//Turn the number to Array
 function formArr(number) {
     let thousands = Math.floor(number / 1000);
     let hundreds = Math.floor((number / 100) % 10);
@@ -29,6 +30,7 @@ function formArr(number) {
     return arr;
 }
 
+//To get number from users
 function getNumber() {
     var value = prompt("Please enter a number");
     let thousands = Math.floor(value / 1000);
@@ -44,7 +46,7 @@ function getNumber() {
     } else
         compare(randomArr, formArr(value));
 }
-
+//To compare the input of users and random number
 function compare(arr1, arr2) {
     var num1 = 0;
     var num2 = 0;
