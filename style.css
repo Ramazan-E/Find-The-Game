@@ -1,5 +1,7 @@
 body {
-    background-image: url(https://cdn.mos.cms.futurecdn.net/yeRy6ZRcXnWMhca2PEYbfH-320-80.jpg)
+    background-image: url(https://cdn.mos.cms.futurecdn.net/yeRy6ZRcXnWMhca2PEYbfH-970-80.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -22,27 +24,10 @@ p {
 
 .btn {
     display: block;
-    margin: 3% auto;
+    margin: 10% auto;
     width: 200px;
     height: 30px;
     font-size: larger;
-}
-
-@media (max-width: 299px) {
-    .btn {
-        display: block;
-        margin: 30% auto;
-        height: 60px;
-        width: 50%;
-        font-size: larger;
-    }
-    p {
-        text-align: center;
-        padding: 30px;
-        background-color: white;
-        width: 500px;
-        height: auto;
-        margin: 30% auto;
-        font-size: larger;
-    }
+    background-color: #777;
+    color: white;
 }
