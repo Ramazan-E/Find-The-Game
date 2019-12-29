@@ -12,32 +12,37 @@ h1 {
     color: white;
 }
 
+.demo {
+    height: 50px;
+    width: auto;
+}
+
 .para {
     text-align: center;
     padding: 5px;
     background-color: white;
-    max-width: 250px;
+    max-width: 30%;
     height: auto;
     margin: 1% auto;
     font-size: larger;
 }
 
-.btn {
-    display: block;
+div {
+    text-align: center;
+    padding: 5px;
+    max-width: 70%;
+    height: auto;
     margin: 1% auto;
-    width: 200px;
-    height: 80px;
     font-size: larger;
-    background-color: #777;
-    color: white;
+    overflow: hidden;
 }
 
 ol {
     padding: 15px;
     background-color: white;
-    width: 200px;
+    max-width: 30%;
     height: auto;
-    margin: 3% auto;
+    margin: 1% auto;
     font-size: larger;
     list-style-position: inside;
 }
@@ -47,9 +52,8 @@ ol li {
     margin: 5px;
 }
 
-div {
+.rules {
     background-color: white;
-    font-size: larger;
     max-width: 100%;
     padding-left: 20px;
 }

@@ -7,14 +7,18 @@
 
     <body>
         <h1>FIND THE NUMBER</h1>
-        <button class="btn" onclick="getNumber();">Input the Number</button>
+        <!--  <button class="btn" onclick="getNumber();">Input the Number</button>  -->
+        <div>
+            <input class="demo" id="input" type="text">
+            <button id="check_it">CHECK</button>
+        </div>
         <p id="par" class="para">Result</p>
         <ol id="result"> </ol>
-        <div>
+        <div class="rules">
             <h2>Game Rules</h2>
             <p>1. The aim of the game is find the number, which is between 1000 and 9999. And, each digit of the number is different.<br> 2. If you can find a digit from the number, but in the different place, you get -1, -2, -3 or -4.<br> For Example, If
                 the number is 1234 and you input 4321, you get -4 or you input 2156, you get -2.<br> 3. If you can find a digit from the number, but in the same place, you get +1, +2, +3 or +4.<br> For Example, If the number is 1234 and you input 1256,
-                you get +2.<br> 4. Good Luck!
+                you get +2.<br> 4. <b>Good Luck!</b>
 
             </p>
         </div>

@@ -6,7 +6,17 @@ function list(val, res) {
     ol.appendChild(li);
 }
 
+document.getElementById("check_it").addEventListener("click", function() {
+    getNumber();
+});
+document.getElementById("input").addEventListener("keyup", function(event) {
+    if (event.which === 13) {
+        getNumber();
+    }
+});
+
 var randomArr = randomDigit();
+
 //To get random number
 function randomDigit() {
     while (true) {
@@ -40,7 +50,8 @@ function formArr(number) {
 
 //To get number from users
 function getNumber() {
-    var value = prompt("Please enter a number");
+    var value = document.getElementById("input").value;
+    //var value = prompt("Please enter a number");
     let thousands = Math.floor(value / 1000);
     let hundreds = Math.floor((value / 100) % 10);
     let tens = Math.floor((value / 10) % 10);
@@ -51,8 +62,11 @@ function getNumber() {
         alert("The number must be between 1000 and 9999")
     } else if (thousands == hundreds || thousands == tens || thousands == units || hundreds == tens || hundreds == units || tens == units) {
         alert("All the digits must be different");
-    } else
+    } else {
         compare(randomArr, formArr(value), value);
+    }
+    document.getElementById("input").value = '';
+    document.getElementById("input").focus();
 }
 //To compare the input of users and random number. Besides get the input value for adding to list.  
 function compare(arr1, arr2, value) {
@@ -82,6 +96,14 @@ function compare(arr1, arr2, value) {
         document.getElementById("par").innerHTML = "+" + num1 + ", " + "-" + num2;
         list(value, ("+" + num1 + ", " + "-" + num2));
     } else if (num1 == 4) {
-        document.getElementById("par").innerHTML = "CONGRATULATIONS!<br>YOU WIN";
+        //To define next game
+        alert("CONGRATULATIONS! YOU WIN");
+        var next_game = confirm("Do you want to play again?");
+        if (next_game == true) {
+            randomArr = randomDigit();
+        } else {
+            alert("Thanks for game!");
+            randomArr = randomDigit();
+        }
     }
 }
